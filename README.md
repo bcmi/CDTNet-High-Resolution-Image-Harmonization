@@ -1,14 +1,20 @@
 # CDTNet-High-Resolution-Image-Harmonization
 
-This is the official repository for the following research paper on **high-resolution image harmonization** and we provide the datasets used in this paper.
 
-## Research Paper
+This is the official repository for the following paper:
 
-**High-Resolution Image Harmonization via Collaborative Dual Transformations** [[arXiv]](https://arxiv.org/abs/2109.06671)
+> **High-Resolution Image Harmonization via Collaborative Dual Transformations**  [[arXiv]](https://arxiv.org/abs/2109.06671)<br>
+>
+> Wenyan Cong, Xinhao Tao, Li Niu, Jing Liang, Xuesong Gao, Qihao Sun, Liqing Zhang<br>
+> Accepted by **CVPR2022**.
 
-Wenyan Cong, Xinhao Tao, Li Niu, Jing Liang, Xuesong Gao, Qihao Sun, Liqing Zhang
+We propose a high-resolution image harmonization network named **CDTNet** to combine pixel-to-pixel transformation and RGB-to-RGB transformation coherently in an end-to-end framework. As shown in the image below, our CDTNet consists of a low-resolution generator for pixel-to-pixel transformation, a color mapping module for RGB-to-RGB transformation, and a refinement module to take advantage of both. 
 
+<div align="center">
+  <img src='https://bcmi.sjtu.edu.cn/~niuli/github_images/CDTnetwork.jpg' align="center" width=800>
+</div>
 
+<br>Unfortunately, code and model are not allowed to be released due to the collaboration with Hisense, but our network could be easily reimplemented based on the public [code sources](#codesource). We provide two datasets used in our paper. We will provide the harmonization results of our method for comparison. More results for comparison are available upon request. 
 
 ## Datasets
 
@@ -29,3 +35,7 @@ Open Image Dataset V6 contains ~9M images with 28M instance segmentation annotat
 100 high-resolution real composite images are with random resolution from 1024 to 6016, which could be downloaded from **[Baidu Cloud](https://pan.baidu.com/s/1fTfLBMxb7sAKtbpQVsfh8g)** (access code: vnrp) [**(Alternative_address)**](https://cloud.bcmi.sjtu.edu.cn/sharing/c9frU77Il).
 
 <img src='examples/hr_real_comp_100.jpg' align="center" width=700>
+
+## Acknowledgement<a name="codesource"></a> 
+
+Our code is heavily borrowed from [iSSAM](https://github.com/saic-vul/image_harmonization) and [3D LUT](https://github.com/HuiZeng/Image-Adaptive-3DLUT).
