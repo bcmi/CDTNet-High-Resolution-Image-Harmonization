@@ -36,6 +36,99 @@ Open Image Dataset V6 contains ~9M images with 28M instance segmentation annotat
 
 <img src='examples/hr_real_comp_100.jpg' align="center" width=700>
 
+
+## Results
+
+We test our CDTNet on 1024$\times$1024 and 2048$\times$2048 images from HAdobe5k dataset and report the harmonization performance based on MSE, PSNR, fMSE,  and SSIM. Here we also release all harmonized results on both resolutions. Due to JPEG compression, the performance tested on our provided results would be not surprisingly worse than our reported performance.
+
+<table class="tg">
+  <tr>
+    <th class="tg-0pky" align="center">Image Size</th>
+    <th class="tg-0pky" align="center">Model</th>
+    <th class="tg-0pky" align="center">MSE</th>
+    <th class="tg-0pky" align="center">PSNR</th>
+    <th class="tg-0pky" align="center">fMSE</th>
+    <th class="tg-0pky" align="center">SSIM</th>
+    <th class="tg-0pky" align="center">Test Images Download</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky" align="center">1024&times;1024</td>
+    <td class="tg-0pky" align="center">CDTNet-256</td>
+    <td class="tg-0pky" align="center">21.24</td>
+    <td class="tg-0pky" align="center">38.77</td>
+    <td class="tg-0pky" align="center">152.13</td>
+    <td class="tg-0pky" align="center">0.9868</td>
+    <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1Twu5YaPeOTQfzOyNNPbSXw">Baidu Cloud</a> (access code: o1bl) </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky" align="center">2048&times;2048</td>
+    <td class="tg-0pky" align="center">CDTNet-512</td>
+    <td class="tg-0pky" align="center">23.35</td>
+    <td class="tg-0pky" align="center">38.45</td>
+    <td class="tg-0pky" align="center">159.13</td>
+    <td class="tg-0pky" align="center">0.9853</td>
+      <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/13IK819ruV2Cmoep_LaLFrA">Baidu Cloud</a> (access code: f4db) </td>
+  </tr>
+</table>
+
+We show several results on 1024$\times$1024 resolution below, where yellow boxes zoom in the particular regions for a better observation.
+
+<img src='examples/examples_1024.png' align="center" width=700>
+
+We also test our CDTNet on 256$\times$256 images from iHarmony4 dataset and compare the results with iS<sup>2</sup>AM. Note that the performance of iS<sup>2</sup>AM is tested using its publicly released model on [[GitHub]](https://github.com/saic-vul/image_harmonization). We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1gwtKPsa_2wTdf1k83E7qew) (access code: jusd).
+
+<table class="tg">
+  <tr>
+    <th class="tg-0pky"  align="center">Sub-dataset</th>
+    <th class="tg-0pky" colspan="2" align="center">HCOCO</th>
+    <th class="tg-0pky" colspan="2" align="center">HAdobe5k</th>
+    <th class="tg-0pky" colspan="2" align="center">HFlickr</th>
+    <th class="tg-0pky" colspan="2" align="center">Hday2night</th>
+    <th class="tg-0pky" colspan="2" align="center">All</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky" align="center">Evaluation metric</td>
+    <td class="tg-0pky" align="center">MSE</td>
+    <td class="tg-0pky" align="center">PSNR</td>
+    <td class="tg-0pky" align="center">MSE</td>
+    <td class="tg-0pky" align="center">PSNR</td>
+    <td class="tg-0pky" align="center">MSE</td>
+    <td class="tg-0pky" align="center">PSNR</td>
+    <td class="tg-0pky" align="center">MSE</td>
+    <td class="tg-0pky" align="center">PSNR</td>
+    <td class="tg-0pky" align="center">MSE</td>
+    <td class="tg-0pky" align="center">PSNR</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky" align="center">iS<sup>2</sup>AM</td>
+    <td class="tg-0pky" align="center">16.48</td>
+    <td class="tg-0pky" align="center">39.16</td>
+    <td class="tg-0pky" align="center">22.60</td>
+    <td class="tg-0pky" align="center">37.24</td>
+    <td class="tg-0pky" align="center">69.67</td>
+    <td class="tg-0pky" align="center">33.56</td>
+    <td class="tg-0pky" align="center">40.59</td>
+    <td class="tg-0pky" align="center">37.72</td>
+    <td class="tg-0pky" align="center">24.65</td>
+    <td class="tg-0pky" align="center">37.95</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky" align="center">CDTNet-256</td>
+    <td class="tg-0pky" align="center">16.25</td>
+    <td class="tg-0pky" align="center">39.15</td>
+    <td class="tg-0pky" align="center">20.62</td>
+    <td class="tg-0pky" align="center">38.24</td>
+    <td class="tg-0pky" align="center">68.61</td>
+    <td class="tg-0pky" align="center">33.55</td>
+    <td class="tg-0pky" align="center">36.72</td>
+    <td class="tg-0pky" align="center">37.95</td>
+    <td class="tg-0pky" align="center">23.75</td>
+    <td class="tg-0pky" align="center">38.23</td>
+  </tr>
+</table>
+
+
+
 ## Acknowledgement<a name="codesource"></a> 
 
 Our code is heavily borrowed from [iSSAM](https://github.com/saic-vul/image_harmonization) and [3D LUT](https://github.com/HuiZeng/Image-Adaptive-3DLUT).
