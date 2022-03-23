@@ -39,7 +39,7 @@ Open Image Dataset V6 contains ~9M images with 28M instance segmentation annotat
 
 ## Results
 
-We test our CDTNet on 1024$\times$1024 and 2048$\times$2048 images from HAdobe5k dataset and report the harmonization performance based on MSE, PSNR, fMSE,  and SSIM. Here we also release all harmonized results on both resolutions. Due to JPEG compression, the performance tested on our provided results would be not surprisingly worse than our reported performance.
+We test our CDTNet on 1024&times;1024 and 2048&times;2048 images from HAdobe5k dataset and report the harmonization performance based on MSE, PSNR, fMSE,  and SSIM. Here we also release all harmonized results on both resolutions. Due to JPEG compression, the performance tested on our provided results would be not surprisingly worse than our reported performance.
 
 <table class="tg">
   <tr>
@@ -71,11 +71,11 @@ We test our CDTNet on 1024$\times$1024 and 2048$\times$2048 images from HAdobe5k
   </tr>
 </table>
 
-We show several results on 1024$\times$1024 resolution below, where yellow boxes zoom in the particular regions for a better observation.
+We show several results on 1024&times;1024 resolution below, where yellow boxes zoom in the particular regions for a better observation.
 
 <img src='examples/examples_1024.png' align="center" width=700>
 
-We also test our CDTNet on 256$\times$256 images from iHarmony4 dataset and compare the results with iS<sup>2</sup>AM. Note that the performance of iS<sup>2</sup>AM is tested using its publicly released model on [[GitHub]](https://github.com/saic-vul/image_harmonization). We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1gwtKPsa_2wTdf1k83E7qew) (access code: jusd).
+We also test our CDTNet on 256&times;256 images from iHarmony4 dataset and compare the results with iS<sup>2</sup>AM. Note that the performance of iS<sup>2</sup>AM is tested using its publicly released model on [[GitHub]](https://github.com/saic-vul/image_harmonization). We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1gwtKPsa_2wTdf1k83E7qew) (access code: jusd).
 
 <table class="tg">
   <tr>
