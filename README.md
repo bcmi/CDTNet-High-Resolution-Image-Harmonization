@@ -127,6 +127,10 @@ We also test our CDTNet on 256&times;256 images from iHarmony4 dataset and compa
   </tr>
 </table>
 
+## Other Resources
+
++ [Awesome-Image-Harmonization](https://github.com/bcmi/Awesome-Image-Harmonization)
++ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
 
 
 ## Acknowledgement<a name="codesource"></a> 
