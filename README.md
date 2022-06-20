@@ -37,8 +37,10 @@ Open Image Dataset V6 contains ~9M images with 28M instance segmentation annotat
 <img src='examples/hr_real_comp_100.jpg' align="center" width=700>
 
 
+
 ## Results
 
+#### 1. High-resolution (1024&times;1024 and 2048&times;2048) results on HAdobe5k test set
 We test our CDTNet on 1024&times;1024 and 2048&times;2048 images from HAdobe5k dataset and report the harmonization performance based on MSE, PSNR, fMSE,  and SSIM. Here we also release all harmonized results on both resolutions. Due to JPEG compression, the performance tested on our provided results would be not surprisingly worse than our reported performance.
 
 <table class="tg">
@@ -72,12 +74,16 @@ We test our CDTNet on 1024&times;1024 and 2048&times;2048 images from HAdobe5k d
 </table>
 
 We show several results on 1024&times;1024 resolution below, where yellow boxes zoom in the particular regions for a better observation.
-We test our CDTNet on 100 composite 1024&times;1024 resolution pictures,and we provide the results on [Baidu Cloud](https://pan.baidu.com/s/1U0rIBfx-kOQgHcT5dDunJg) (access code: nfvw).
 
 <img src='examples/examples_1024.png' align="center" width=700>
 
+#### 2. High-resolution (1024&times;1024) results on 100 real composite images 
+
+We test our CDTNet on 100 high-resolution real composite images as mentioned above, and provide the results on [Baidu Cloud](https://pan.baidu.com/s/1U0rIBfx-kOQgHcT5dDunJg) (access code: nfvw).
+
+#### 3. Low-resolution (256&times;256) results on iHarmony4 test set
+
 We also test our CDTNet on 256&times;256 images from iHarmony4 dataset and compare the results with iS<sup>2</sup>AM. Note that the performance of iS<sup>2</sup>AM is tested using its publicly released model on [[GitHub]](https://github.com/saic-vul/image_harmonization). We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1baIBBBV8bTqAeLYOSTXSOA#list/path=%2F) (access code: qiam).
-Finally,we test our CDTNet on another 99 composite 256&times;256 resolution pictures,and we provide the results on [Baidu Cloud](https://pan.baidu.com/s/1djl8dHqzbZg893fUf6zImw) (access code: i6e8).
 
 <table class="tg">
   <tr>
@@ -128,6 +134,11 @@ Finally,we test our CDTNet on another 99 composite 256&times;256 resolution pict
     <td class="tg-0pky" align="center">38.23</td>
   </tr>
 </table>
+
+#### 4. Low-resolution (256&times;256) results on 99 real composite images
+
+We also test our CDTNet on another 99 real composite images used in [previous works](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4), and provide the results on [Baidu Cloud](https://pan.baidu.com/s/1djl8dHqzbZg893fUf6zImw) (access code: i6e8).
+
 
 ## Other Resources
 
