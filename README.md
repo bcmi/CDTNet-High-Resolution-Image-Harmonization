@@ -75,7 +75,7 @@ We show several results on 1024&times;1024 resolution below, where yellow boxes 
 
 <img src='examples/examples_1024.png' align="center" width=700>
 
-We also test our CDTNet on 256&times;256 images from iHarmony4 dataset and compare the results with iS<sup>2</sup>AM. Note that the performance of iS<sup>2</sup>AM is tested using its publicly released model on [[GitHub]](https://github.com/saic-vul/image_harmonization). We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1XmDdubDrQTYaKkG2NeXrig?pwd=jxts#list/path=%2F) (access code: jxts).
+We also test our CDTNet on 256&times;256 images from iHarmony4 dataset and compare the results with iS<sup>2</sup>AM. Note that the performance of iS<sup>2</sup>AM is tested using its publicly released model on [[GitHub]](https://github.com/saic-vul/image_harmonization). We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1baIBBBV8bTqAeLYOSTXSOA#list/path=%2F) (access code: qiam).
 
 <table class="tg">
   <tr>
