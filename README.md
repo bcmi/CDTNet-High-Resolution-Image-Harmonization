@@ -60,7 +60,7 @@ We test our CDTNet on 1024&times;1024 and 2048&times;2048 images from HAdobe5k d
     <td class="tg-0pky" align="center">38.77</td>
     <td class="tg-0pky" align="center">152.13</td>
     <td class="tg-0pky" align="center">0.9868</td>
-    <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1Twu5YaPeOTQfzOyNNPbSXw">Baidu Cloud</a> (access code: o1bl) </td>
+    <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1ShSJb-0V0SELB6QEXPHsPQ">Baidu Cloud</a> (access code: i8l1) </td>
   </tr>
   <tr>
     <td class="tg-0pky" align="center">2048&times;2048</td>
@@ -69,7 +69,7 @@ We test our CDTNet on 1024&times;1024 and 2048&times;2048 images from HAdobe5k d
     <td class="tg-0pky" align="center">38.45</td>
     <td class="tg-0pky" align="center">159.13</td>
     <td class="tg-0pky" align="center">0.9853</td>
-      <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/13IK819ruV2Cmoep_LaLFrA">Baidu Cloud</a> (access code: f4db) </td>
+      <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1wgSW7E1ws-q7XHuNaVnKrw">Baidu Cloud</a> (access code: nu2h) </td>
   </tr>
 </table>
 
