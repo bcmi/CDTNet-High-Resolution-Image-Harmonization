@@ -79,7 +79,7 @@ We show several results on 1024&times;1024 resolution below, where yellow boxes 
 
 #### 2. High-resolution (1024&times;1024) results on 100 real composite images 
 
-We test our CDTNet on 100 high-resolution real composite images as mentioned above, and provide the results on [Baidu Cloud](https://pan.baidu.com/s/1U0rIBfx-kOQgHcT5dDunJg) (access code: nfvw).
+We test our CDTNet on 100 high-resolution real composite images as mentioned above, and provide the results on [Baidu Cloud](https://pan.baidu.com/s/1RX9ltfA0HskI06THbhpHmA) (access code: lr7k).
 
 #### 3. Low-resolution (256&times;256) results on iHarmony4 test set
 
