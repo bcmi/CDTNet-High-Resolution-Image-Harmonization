@@ -16,6 +16,8 @@ We propose a high-resolution image harmonization network named **CDTNet** to com
 
 <br>Unfortunately, code and model are not allowed to be made public due to the collaboration with Hisense, but our network could be easily reimplemented based on the public [code sources](#codesource). We have provided two datasets used in our paper and the harmonization results of our method for comparison. **More resources for academic usage are available upon request.** 
 
+**By the way, an unofficial implementation of our paper can be found [here](https://github.com/SuhyeonHa/CDTNet-PyTorch).**
+
 ## Datasets
 
 ### 1. HAdobe5k
