@@ -94,11 +94,11 @@ We test our CDTNet on 1024&times;1024 and 2048&times;2048 images from HAdobe5k d
   <tr>
     <td class="tg-0pky" align="center">2048&times;2048</td>
     <td class="tg-0pky" align="center">CDTNet-512</td>
-    <td class="tg-0pky" align="center">23.35</td>
-    <td class="tg-0pky" align="center">38.45</td>
-    <td class="tg-0pky" align="center">159.13</td>
-    <td class="tg-0pky" align="center">0.9853</td>
-      <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1wgSW7E1ws-q7XHuNaVnKrw">Baidu Cloud</a> (access code: nu2h) </td>
+    <td class="tg-0pky" align="center">20.82</td>
+    <td class="tg-0pky" align="center">38.34</td>
+    <td class="tg-0pky" align="center">155.24</td>
+    <td class="tg-0pky" align="center">0.9847</td>
+      <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1qJ12D0U04UDDPAe8lLRpwg">Baidu Cloud</a> (access code: rj9p) </td>
   </tr>
 </table>
 
@@ -112,7 +112,7 @@ We test our CDTNet on 100 high-resolution real composite images as mentioned abo
 
 #### 3. Low-resolution (256&times;256) results on iHarmony4 test set
 
-We also test our CDTNet on 256&times;256 images from iHarmony4 dataset and compare the results with iS<sup>2</sup>AM. Note that the performance of iS<sup>2</sup>AM is tested using its publicly released model on [[GitHub]](https://github.com/saic-vul/image_harmonization).We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/11cvpp2ziNokblXbpoxawaQ?pwd=0ddx) (access code: 0ddx).
+We also test our CDTNet on 256&times;256 images from iHarmony4 dataset and compare the results with iS<sup>2</sup>AM. Note that the performance of iS<sup>2</sup>AM is tested using its publicly released model on [[GitHub]](https://github.com/saic-vul/image_harmonization).We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1CLGeV9BhqSjAbLY_FivhMw) (access code: l7gh).
 
 <table class="tg">
   <tr>
@@ -151,16 +151,16 @@ We also test our CDTNet on 256&times;256 images from iHarmony4 dataset and compa
   </tr>
   <tr>
     <td class="tg-0pky" align="center">CDTNet-256</td>
-    <td class="tg-0pky" align="center">16.25</td>
-    <td class="tg-0pky" align="center">39.15</td>
-    <td class="tg-0pky" align="center">20.62</td>
-    <td class="tg-0pky" align="center">38.24</td>
-    <td class="tg-0pky" align="center">68.61</td>
-    <td class="tg-0pky" align="center">33.55</td>
-    <td class="tg-0pky" align="center">36.72</td>
-    <td class="tg-0pky" align="center">37.95</td>
-    <td class="tg-0pky" align="center">23.75</td>
-    <td class="tg-0pky" align="center">38.23</td>
+    <td class="tg-0pky" align="center">16.17</td>
+    <td class="tg-0pky" align="center">39.25</td>
+    <td class="tg-0pky" align="center">21.10</td>
+    <td class="tg-0pky" align="center">38.26</td>
+    <td class="tg-0pky" align="center">69.73</td>
+    <td class="tg-0pky" align="center">33.62</td>
+    <td class="tg-0pky" align="center">40.74</td>
+    <td class="tg-0pky" align="center">37.75</td>
+    <td class="tg-0pky" align="center">24.04</td>
+    <td class="tg-0pky" align="center">38.30</td>
   </tr>
 </table>
 
