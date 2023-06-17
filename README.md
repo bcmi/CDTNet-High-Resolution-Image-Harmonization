@@ -17,9 +17,7 @@ We propose a high-resolution image harmonization network named **CDTNet** to com
 ## Getting Started
 
 ### Prerequisites
-You can refer to [iSSAM](https://github.com/saic-vul/image_harmonization) and [3D LUT](https://github.com/HuiZeng/Image-Adaptive-3DLUT) for guidance on setting up the environment.
-
-Like [iSSAM](https://github.com/saic-vul/image_harmonization), you must configure the paths to the datasets in [config.yml](./config.yml).
+Please refer to [iSSAM](https://github.com/saic-vul/image_harmonization) and [3D LUT](https://github.com/HuiZeng/Image-Adaptive-3DLUT) for guidance on setting up the environment.
 
 ### Installation
 + Clone this repo: 
@@ -30,7 +28,7 @@ cd ./CDTNet-High-Resolution-Image-Harmonization
 + Download the [iHarmony4](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4) dataset, and configure the paths to the datasets in [config.yml](./config.yml).
 
 ### Training
-If you want to training CDTNet in the HAdobe5K dataset with 4 LUTs and pre-trained pixel-to-pixel transformation model "issam256.pth", high resolution is 2048 and low resolution is 512, you can run this command:
+If you want to train CDTNet-512 on 2048*2048 HAdobe5K training set with 4 LUTs and pre-trained pixel-to-pixel transformation model "issam256.pth", you can run this command:
 ```
 python3 train.py models/CDTNet.py --gpus=0 --workers=10 --exp_name=CDTNet_1024 --datasets HAdobe5k --batch_size=4 --hr 1024 --lr 256 --weights ./issam256.pth --n_lut 4
 ```
@@ -38,7 +36,7 @@ python3 train.py models/CDTNet.py --gpus=0 --workers=10 --exp_name=CDTNet_1024 -
 We have also provided some commands in the "train.sh" for your convenience.
 
 ### Testing
-If you want to testing CDTNet in the HAdobe5K dataset with the "HAdobe5k_2048.pth" checkpoint, with high resolution is 2048 and low resolution is 512, finally save the results in "CDTNet_2048_result", you can run this command:
+If you want to test CDTNet-512 on 2048*2048 HAdobe5K test set with the "HAdobe5k_2048.pth" checkpoint and save the results in "CDTNet_2048_result", you can run this command:
 ```
 python3 evaluate_model.py CDTNet ./HAdobe5k_2048.pth --gpu 0 --datasets HAdobe5k --hr 2048 --lr 512 --save_dir ./CDTNet_2048_result
 ```
