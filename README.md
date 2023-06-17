@@ -112,57 +112,7 @@ We test our CDTNet on 100 high-resolution real composite images as mentioned abo
 
 #### 3. Low-resolution (256&times;256) results on iHarmony4 test set
 
-We also test our CDTNet on 256&times;256 images from iHarmony4 dataset and compare the results with iS<sup>2</sup>AM. Note that the performance of iS<sup>2</sup>AM is tested using its publicly released model on [[GitHub]](https://github.com/saic-vul/image_harmonization).We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1CLGeV9BhqSjAbLY_FivhMw) (access code: l7gh).
-
-<table class="tg">
-  <tr>
-    <th class="tg-0pky"  align="center">Sub-dataset</th>
-    <th class="tg-0pky" colspan="2" align="center">HCOCO</th>
-    <th class="tg-0pky" colspan="2" align="center">HAdobe5k</th>
-    <th class="tg-0pky" colspan="2" align="center">HFlickr</th>
-    <th class="tg-0pky" colspan="2" align="center">Hday2night</th>
-    <th class="tg-0pky" colspan="2" align="center">All</th>
-  </tr>
-  <tr>
-    <td class="tg-0pky" align="center">Evaluation metric</td>
-    <td class="tg-0pky" align="center">MSE</td>
-    <td class="tg-0pky" align="center">PSNR</td>
-    <td class="tg-0pky" align="center">MSE</td>
-    <td class="tg-0pky" align="center">PSNR</td>
-    <td class="tg-0pky" align="center">MSE</td>
-    <td class="tg-0pky" align="center">PSNR</td>
-    <td class="tg-0pky" align="center">MSE</td>
-    <td class="tg-0pky" align="center">PSNR</td>
-    <td class="tg-0pky" align="center">MSE</td>
-    <td class="tg-0pky" align="center">PSNR</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky" align="center">iS<sup>2</sup>AM</td>
-    <td class="tg-0pky" align="center">16.48</td>
-    <td class="tg-0pky" align="center">39.16</td>
-    <td class="tg-0pky" align="center">22.60</td>
-    <td class="tg-0pky" align="center">37.24</td>
-    <td class="tg-0pky" align="center">69.67</td>
-    <td class="tg-0pky" align="center">33.56</td>
-    <td class="tg-0pky" align="center">40.59</td>
-    <td class="tg-0pky" align="center">37.72</td>
-    <td class="tg-0pky" align="center">24.65</td>
-    <td class="tg-0pky" align="center">37.95</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky" align="center">CDTNet-256</td>
-    <td class="tg-0pky" align="center">16.17</td>
-    <td class="tg-0pky" align="center">39.25</td>
-    <td class="tg-0pky" align="center">21.10</td>
-    <td class="tg-0pky" align="center">38.26</td>
-    <td class="tg-0pky" align="center">69.73</td>
-    <td class="tg-0pky" align="center">33.62</td>
-    <td class="tg-0pky" align="center">40.74</td>
-    <td class="tg-0pky" align="center">37.75</td>
-    <td class="tg-0pky" align="center">24.04</td>
-    <td class="tg-0pky" align="center">38.30</td>
-  </tr>
-</table>
+We also test our CDTNet on 256&times;256 images from iHarmony4 dataset. We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1CLGeV9BhqSjAbLY_FivhMw) (access code: l7gh).
 
 #### 4. Low-resolution (256&times;256) results on 99 real composite images
 
