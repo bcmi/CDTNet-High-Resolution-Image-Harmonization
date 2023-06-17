@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=1 taskset -c 36-47 python3 evaluate_model.py CDTNet ./HAdobe5k_2048.pth --gpu 0 --datasets HAdobe5k --hr 2048 --lr 512 --save_dir ./CDTNet_2048_result
+#CUDA_VISIBLE_DEVICES=0 taskset -c 0-11 python3 evaluate_model.py CDTNet ./iHarmony4_256.pth --gpu 0 --datasets HDay2Night,HFlickr,HCOCO,HAdobe5k --hr 256 --lr 256 --save_dir ./CDTNet_256_result

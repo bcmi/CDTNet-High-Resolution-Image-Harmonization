@@ -1,0 +1,3 @@
+#CUDA_VISIBLE_DEVICES=0 taskset -c 0-11 python3 train.py models/CDTNet.py --gpus=0 --workers=10 --exp_name=CDTNet_2048 --datasets HAdobe5k --batch_size=2 --hr 2048 --lr 512 --weights ./issam256.pth --n_lut 4
+#CUDA_VISIBLE_DEVICES=2 taskset -c 24-35 python3 train.py models/CDTNet.py --gpus=0 --workers=10 --exp_name=CDTNet_256 --datasets HDay2Night,HFlickr,HCOCO,HAdobe5k --batch_size=16 --hr 256 --lr 256 --weights ./issam256.pth --n_lut 4
+CUDA_VISIBLE_DEVICES=1 taskset -c 12-23 python3 train.py models/CDTNet.py --gpus=0 --workers=10 --exp_name=CDTNet_1024 --datasets HAdobe5k --batch_size=4 --hr 1024 --lr 256 --weights ./issam256.pth --n_lut 4

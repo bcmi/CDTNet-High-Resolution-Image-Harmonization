@@ -1,0 +1,3 @@
+# ninja log v5
+0	5702	1685877347983449855	/home/taoxinhao/CDTNet-High-Resolution-Image-Harmonization/trilinear_cpp/build/temp.linux-x86_64-3.9/src/trilinear_kernel.o	1e1d3bd8c40c61f2
+0	19102	1685877361391416909	/home/taoxinhao/CDTNet-High-Resolution-Image-Harmonization/trilinear_cpp/build/temp.linux-x86_64-3.9/src/trilinear_cuda.o	41d8c17847f2ec1d
