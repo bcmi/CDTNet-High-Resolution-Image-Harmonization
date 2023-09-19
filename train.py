@@ -28,8 +28,12 @@ def parse_args():
     parser.add_argument('--batch_size', type=int, default=1,
                         help='The batch size while training')
     
-    parser.add_argument('--hr', type=int, default=1024, help='target high resolution')
+    parser.add_argument('--hr_h', type=int, default=1024, help='target h resolution')
+    parser.add_argument('--hr_w', type=int, default=1024, help='target w resolution')
     parser.add_argument('--lr', type=int, default=256, help='target base resolution')
+
+    parser.add_argument('--is_sim', action='store_true', default=False,
+                        help='Whether use CDTNet-sim.')
 
     parser.add_argument('--ngpus', type=int, default=1,
                         help='Number of GPUs. '

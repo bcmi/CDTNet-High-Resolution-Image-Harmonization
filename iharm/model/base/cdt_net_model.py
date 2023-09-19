@@ -24,7 +24,6 @@ class CDTNet(nn.Module):
     ):
         super(CDTNet, self).__init__()
         self.depth = depth
-        self.base_resolution = 256
         self.n_lut = n_lut
         self.mean = torch.tensor([.485, .456, .406], dtype=torch.float32).view(1, 3, 1, 1)
         self.std = torch.tensor([.229, .224, .225], dtype=torch.float32).view(1, 3, 1, 1)
@@ -47,8 +46,9 @@ class CDTNet(nn.Module):
         #3.refinement
         self.refine = Refine(feature_channels=32,inner_channel=64)
 
-    def set_resolution(self, hr, lr, finetune_base):
-        self.target_resolution = hr
+    def set_resolution(self, hr_w, hr_h, lr, finetune_base):
+        self.target_w_resolution = hr_w
+        self.target_h_resolution = hr_h
         self.base_resolution = lr
         self.finetune_base = finetune_base
 
@@ -114,9 +114,12 @@ class CDTNet(nn.Module):
         intermediates = self.encoder(basic_input, backbone_features)
         output,output_map = self.decoder(intermediates, basic_input[:,:3,:,:], basic_input[:,3:,:,:])
         lut_output = self.lut(intermediates, image, mask)
-        normed_lut = self.normalize(lut_output)
-        _, hd_output = self.refine(output, normed_image, mask, output_map, normed_lut, target_resolution=(self.target_resolution,self.target_resolution))
-        denormed_hd_output = self.denormalize(hd_output)
+        if self.is_sim:
+            denormed_hd_output = lut_output
+        else:
+            normed_lut = self.normalize(lut_output)
+            _, hd_output = self.refine(output, normed_image, mask, output_map, normed_lut, target_resolution=(self.target_w_resolution,self.target_h_resolution))
+            denormed_hd_output = self.denormalize(hd_output)
         return {'images': denormed_hd_output, 'lut_images':lut_output, 'base_images': self.denormalize(output)}
 
         

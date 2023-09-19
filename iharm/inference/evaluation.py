@@ -13,7 +13,7 @@ def evaluate_dataset(dataset, predictor, metrics_hub, logger, save_dir=None):
 
         sample_mask = sample['object_mask']
         pred = predictor.predict(sample['image'], sample_mask, return_numpy=False) # H,W,C
-
+        print(np.sum(sample['image']),np.sum(sample_mask),float(torch.sum(pred)))
 
         target_image = torch.as_tensor(sample['target_image'], dtype=torch.float32).to(predictor.device)
         sample_mask = torch.as_tensor(sample_mask, dtype=torch.float32).to(predictor.device) #H,W
@@ -30,6 +30,7 @@ def evaluate_dataset(dataset, predictor, metrics_hub, logger, save_dir=None):
             sample_mask = (sample_mask.unsqueeze(-1).repeat(1,1,3).detach().cpu().numpy()*255).astype(np.uint8)
             #out_image = np.concatenate([input_image,sample_mask, target, pred], axis=1)
             out_image = cv2.cvtColor(pred, cv2.COLOR_RGB2BGR)
+            
 
             # metrics_list = metrics_hub.metrics
             # MSE = metrics_list[1]

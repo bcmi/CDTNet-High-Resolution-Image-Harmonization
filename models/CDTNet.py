@@ -37,7 +37,8 @@ def init_model(cfg):
 
     model = CDTNet(depth=4, ch=32, image_fusion=True, attention_mid_k=0.5,
         attend_from=2, batchnorm_from=2, n_lut=cfg.n_lut)
-    model.set_resolution(cfg.hr, cfg.lr, cfg.finetune_base)
+    model.set_resolution(cfg.hr_w, cfg.hr_h, cfg.lr, cfg.finetune_base)
+    model.is_sim = cfg.is_sim
     model.to(cfg.device)
     model.encoder.apply(initializer.XavierGluon(rnd_type='gaussian', magnitude=1.0))
     model.decoder.apply(initializer.XavierGluon(rnd_type='gaussian', magnitude=1.0))

@@ -35,8 +35,11 @@ def parse_args():
                         help='The path to the checkpoint. '
                              'This can be a relative path (relative to cfg.MODELS_PATH) '
                              'or an absolute path. The file extension can be omitted.')
-    parser.add_argument('--lr', type=int, default=256, help='target base resolution')
-    parser.add_argument('--hr', type=int, default=1024, help='target base resolution')
+    parser.add_argument('--lr', type=int, default=256, help='base resolution')
+    parser.add_argument('--hr_h', type=int, default=1024, help='target h resolution')
+    parser.add_argument('--hr_w', type=int, default=1024, help='target w resolution')
+    parser.add_argument('--is_sim', action='store_true', default=False,
+                        help='Whether use CDTNet-sim.')
     parser.add_argument('--save_dir', type=str, default='',
                         help='The path to the checkpoint. '
                              'This can be a relative path (relative to cfg.MODELS_PATH) '
@@ -70,7 +73,8 @@ def main():
     device = torch.device(f'cuda:{args.gpu}')
     net = load_model(args.model_type, checkpoint_path, verbose=True)
     print(net)
-    net.set_resolution(args.hr, args.lr, False)
+    net.set_resolution(args.hr_h, args.hr_w, args.lr, False)
+    net.is_sim = args.is_sim
     predictor = Predictor(net, device, with_flip=args.use_flip)
     save_dir = args.save_dir
     if save_dir!='': 
@@ -83,7 +87,7 @@ def main():
     for dataset_indx, dataset_name in enumerate(datasets_names):
         dataset = HDataset(
             cfg.get(f'{dataset_name.upper()}_PATH'), split='test',
-            augmentator=HCompose([Resize(args.hr, args.hr)]),
+            augmentator=HCompose([Resize(args.hr_h, args.hr_w)]),
             keep_background_prob=-1
         )
 

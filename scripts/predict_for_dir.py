@@ -34,6 +34,8 @@ def main():
     device = torch.device(f'cuda:{args.gpu}')
     checkpoint_path = find_checkpoint(cfg.MODELS_PATH, args.checkpoint)
     net = load_model(args.model_type, checkpoint_path, verbose=True)
+    net.set_resolution(args.hr_h, args.hr_w, args.lr, False)
+    net.is_sim = args.is_sim
     predictor = Predictor(net, device)
 
     image_names = os.listdir(args.images)
@@ -54,17 +56,16 @@ def main():
         image = cv2.imread(image_path)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         image_size = image.shape
-        image = cv2.resize(image, (256,256), cv2.INTER_LINEAR)
+        image = cv2.resize(image, (args.hr_h, args.hr_w), cv2.INTER_LINEAR)
 
         mask_path = osp.join(args.masks, '_'.join(image_name.split('.')[:-1])[0:-2] + '.png')
-        mask_image = cv2.imread(mask_path)
-        mask_image = cv2.resize(mask_image, (256,256), cv2.INTER_LINEAR)
+        mask_image = cv2.imread(mask_path).astype(np.float32) / 255
+        mask_image = cv2.resize(mask_image, (args.hr_h, args.hr_w), cv2.INTER_LINEAR)
         mask = mask_image[:, :, 0]
-        mask[mask <= 100] = 0
-        mask[mask > 100] = 1
-        mask = mask.astype(np.float32)
-
-        pred = predictor.predict(image, mask)
+        pred = predictor.predict(image, mask, return_numpy=False)
+        print(np.sum(image),np.sum(mask),float(torch.sum(pred)))
+        pred = pred.detach().cpu().numpy().astype(np.uint8)
+        pred = cv2.cvtColor(pred, cv2.COLOR_RGB2BGR)
 
         if args.original_size:
             pred = cv2.resize(pred, image_size[:-1][::-1])
@@ -86,6 +87,15 @@ def parse_args():
         '--masks', type=str,
         help='Path to directory with .png binary masks for images, named exactly like images without last _postfix.'
     )
+    parser.add_argument('--lr', type=int, default=256, help='base resolution')
+    parser.add_argument('--hr_h', type=int, default=1024, help='target h resolution')
+    parser.add_argument('--hr_w', type=int, default=1024, help='target w resolution')
+    parser.add_argument('--is_sim', action='store_true', default=False,
+                        help='Whether use CDTNet-sim.')
+    parser.add_argument('--save_dir', type=str, default='',
+                        help='The path to the checkpoint. '
+                             'This can be a relative path (relative to cfg.MODELS_PATH) '
+                             'or an absolute path. The file extension can be omitted.')
     parser.add_argument(
         '--original-size', action='store_true', default=False,
         help='Resize predicted image back to the original size.'

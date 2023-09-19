@@ -30,7 +30,7 @@ cd ./CDTNet-High-Resolution-Image-Harmonization
 ### Training
 If you want to train CDTNet-512 on 2048*2048 HAdobe5K training set with 4 LUTs and pre-trained pixel-to-pixel transformation model "issam256.pth", you can run this command:
 ```
-python3 train.py models/CDTNet.py --gpus=0 --workers=10 --exp_name=CDTNet_1024 --datasets HAdobe5k --batch_size=4 --hr 1024 --lr 256 --weights ./issam256.pth --n_lut 4
+python3 train.py models/CDTNet.py --gpus=0 --workers=10 --exp_name=CDTNet_1024 --datasets HAdobe5k --batch_size=4 --hr_w 1024 --hr_h 1024 --lr 256 --weights ./issam256.pth --n_lut 4
 ```
 
 We have also provided some commands in the "train.sh" for your convenience.
@@ -38,10 +38,18 @@ We have also provided some commands in the "train.sh" for your convenience.
 ### Testing
 If you want to test CDTNet-512 on 2048*2048 HAdobe5K test set with the "HAdobe5k_2048.pth" checkpoint and save the results in "CDTNet_2048_result", you can run this command:
 ```
-python3 evaluate_model.py CDTNet ./HAdobe5k_2048.pth --gpu 0 --datasets HAdobe5k --hr 2048 --lr 512 --save_dir ./CDTNet_2048_result
+python3 evaluate_model.py CDTNet ./HAdobe5k_2048.pth --gpu 0 --datasets HAdobe5k --hr_w 2048 --hr_h 2048 --lr 512 --save_dir ./CDTNet_2048_result
 ```
 
 We have also provided some commands in the "test.sh" for your convenience.
+
+### Prediction
+If you want to make predictions using your own dataset which the composite images are in ./predict_images and the masks are in ./masks using CDTNet-512 on 2048*2048 with the "HAdobe5k_2048.pth" checkpoint and save the results in "CDTNet_2048_generate", you can run this command:
+```
+python3 scripts/predict_for_dir.py CDTNet ./HAdobe5k_2048.pth --images ./predict_images --masks ./predict_masks --gpu 0 --hr_h 2048 --hr_w 2048 --lr 512 --results-path ./CDTNet_2048_generate
+```
+
+We have also provided some commands in the "predict.sh" for your convenience.
 
 ## Datasets
 
