@@ -11,11 +11,9 @@ This is the official repository for the following paper:
 > Wenyan Cong, Xinhao Tao, Li Niu, Jing Liang, Xuesong Gao, Qihao Sun, Liqing Zhang<br>
 > Accepted by **CVPR2022**.
 
-We propose a high-resolution image harmonization network named **CDTNet** to combine pixel-to-pixel transformation and RGB-to-RGB transformation coherently in an end-to-end framework. As shown in the image below, our CDTNet consists of a low-resolution generator for pixel-to-pixel transformation, a color mapping module for RGB-to-RGB transformation, and a refinement module to take advantage of both. 
+**This is the first paper focusing on high-resolution image harmonization.** We propose CDTNet to combine **pixel-to-pixel transformation** and **color-to-color transformation** coherently in an end-to-end framework. As shown in the image below, our CDTNet consists of a low-resolution generator for pixel-to-pixel transformation, a color mapping module for RGB-to-RGB transformation, and a refinement module to take advantage of both. **For efficiency, you can use CDTNet(sim) which only has color-to-color transformation.**
 
-<div align="center">
-  <img src='https://bcmi.sjtu.edu.cn/~niuli/github_images/CDTnetwork.jpg' align="center" width=800>
-</div>
+<img src='examples/network.jpg' align="center" width=700>
 
 ## Getting Started
 
