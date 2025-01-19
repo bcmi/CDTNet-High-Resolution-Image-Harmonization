@@ -130,7 +130,7 @@ We also test our CDTNet on another 99 real composite images used in [previous wo
 ## Other Resources
 
 + [Awesome-Image-Harmonization](https://github.com/bcmi/Awesome-Image-Harmonization)
-+ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
++ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Object-Insertion)
 
 
 ## Acknowledgement<a name="codesource"></a> 
