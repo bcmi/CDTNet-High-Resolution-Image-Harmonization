@@ -57,9 +57,9 @@ We have also provided some commands in the "predict.sh" for your convenience.
 
 ### 1. HAdobe5k
 
-HAdobe5k is one of the four synthesized sub-datasets in [iHarmony4](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4) dataset, which is the benchmark dataset for image harmonization. Specifically, HAdobe5k is generated based on [MIT-Adobe FiveK](<http://data.csail.mit.edu/graphics/fivek/>) dataset and contains 21597 image triplets (composite image, real image, mask) as shown below, where 19437 triplets are used for training and 2160 triplets are used for test. Official training/test split could be found in **[Baidu Cloud](https://pan.baidu.com/s/1NAtLnCdY1-4uxRKB8REPQg)** [**(Alternative_address)**](https://cloud.bcmi.sjtu.edu.cn/sharing/eBXLV8iU5).
+HAdobe5k is one of the four synthesized sub-datasets in [iHarmony4](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4) dataset, which is the benchmark dataset for image harmonization. Specifically, HAdobe5k is generated based on [MIT-Adobe FiveK](<http://data.csail.mit.edu/graphics/fivek/>) dataset and contains 21597 image triplets (composite image, real image, mask) as shown below, where 19437 triplets are used for training and 2160 triplets are used for test. Official training/test split could be found in **[Baidu Cloud](https://pan.baidu.com/s/1qVqsSf0gFjBlfP8xNiNGpQ?pwd=84rb)** or [**Dropbox**](https://www.dropbox.com/scl/fi/lcjrnxfle43daf2l0jgcq/HAdobe5k.zip?rlkey=vekbegch1uh945hsg92dc35h5&st=ezxi90j2&dl=0).
 
-MIT-Adobe FiveK provides with 6 retouched versions for each image, so we manually segment the foreground region and exchange foregrounds between 2 versions to generate composite images. High-resolution images in HAdobe5k sub-dataset are with random resolution from 1296 to 6048, which could be downloaded from **[Baidu Cloud](https://pan.baidu.com/s/1NAtLnCdY1-4uxRKB8REPQg)** [**(Alternative_address)**](https://cloud.bcmi.sjtu.edu.cn/sharing/eBXLV8iU5).
+MIT-Adobe FiveK provides with 6 retouched versions for each image, so we manually segment the foreground region and exchange foregrounds between 2 versions to generate composite images. High-resolution images in HAdobe5k sub-dataset are with random resolution from 1296 to 6048, which could be downloaded from **[Baidu Cloud](https://pan.baidu.com/s/1qVqsSf0gFjBlfP8xNiNGpQ?pwd=84rb)** or [**Dropbox**](https://www.dropbox.com/scl/fi/lcjrnxfle43daf2l0jgcq/HAdobe5k.zip?rlkey=vekbegch1uh945hsg92dc35h5&st=ezxi90j2&dl=0).
 
 <img src='examples/hadobe5k.png' align="center" width=600>
 
@@ -69,7 +69,7 @@ Considering that the composite images in HAdobe5k are synthetic composite images
 
 Open Image Dataset V6 contains ~9M images with 28M instance segmentation annotations of 350 categories, where enormous images are collected from Flickr and with high resolution. So the foreground images are collected from the whole Open Image Dataset V6, where the provided instance segmentations are used to crop the foregrounds. The background images are collected from both Open Image Dataset V6 and Flickr, considering the resolutions and semantics. Then cropped foregrounds and background images are combined using PhotoShop, leading to obviously inharmonious composite images.
 
-100 high-resolution real composite images are with random resolution from 1024 to 6016, which could be downloaded from **[Baidu Cloud](https://pan.baidu.com/s/1fTfLBMxb7sAKtbpQVsfh8g)** (access code: vnrp) [**(Alternative_address)**](https://cloud.bcmi.sjtu.edu.cn/sharing/c9frU77Il).
+100 high-resolution real composite images are with random resolution from 1024 to 6016, which could be downloaded from **[Baidu Cloud](https://pan.baidu.com/s/1fTfLBMxb7sAKtbpQVsfh8g)** (access code: vnrp) or [**Dropbox**](https://www.dropbox.com/scl/fo/h7scj5yq6x22rxwqnao40/AFJixrNw9mD742h8qj-vG-0?rlkey=0tov1jwskt96p9fqxadgaqecj&st=0w6n4lcd&dl=0).
 
 <img src='examples/hr_real_comp_100.jpg' align="center" width=700>
 
@@ -97,7 +97,7 @@ We test our CDTNet on 1024&times;1024 and 2048&times;2048 images from HAdobe5k d
     <td class="tg-0pky" align="center">38.77</td>
     <td class="tg-0pky" align="center">152.13</td>
     <td class="tg-0pky" align="center">0.9868</td>
-    <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1ShSJb-0V0SELB6QEXPHsPQ">Baidu Cloud</a> (access code: i8l1) </td>
+    <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1ShSJb-0V0SELB6QEXPHsPQ">Baidu Cloud</a> (access code: i8l1) or <a href="https://www.dropbox.com/scl/fo/42gzfuv7xtcu6fbamvng3/AGSy_U_kWSCE_TR8BB63pLw?rlkey=gwj664fr2sqo6uok9gdf7hqvy&st=gjkknp0v&dl=0">Dropbox</a> </td>
   </tr>
   <tr>
     <td class="tg-0pky" align="center">2048&times;2048</td>
@@ -106,7 +106,7 @@ We test our CDTNet on 1024&times;1024 and 2048&times;2048 images from HAdobe5k d
     <td class="tg-0pky" align="center">38.34</td>
     <td class="tg-0pky" align="center">155.24</td>
     <td class="tg-0pky" align="center">0.9847</td>
-      <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1qJ12D0U04UDDPAe8lLRpwg">Baidu Cloud</a> (access code: rj9p) </td>
+      <td class="tg-0pky" align="center"><a href="https://pan.baidu.com/s/1qJ12D0U04UDDPAe8lLRpwg">Baidu Cloud</a> (access code: rj9p) or <a href="https://www.dropbox.com/scl/fi/0510ew72g0z02wv4obgtd/CDTNet_2048_result.zip?rlkey=mblnpp4thn75pc6lcitwcjzuu&st=toeqjn6l&dl=0">Dropbox</a>   </td>
   </tr>
 </table>
 
@@ -116,15 +116,15 @@ We show several results on 1024&times;1024 resolution below, where yellow boxes 
 
 #### 2. High-resolution (1024&times;1024) results on 100 real composite images 
 
-We test our CDTNet on 100 high-resolution real composite images as mentioned above, and provide the results on [Baidu Cloud](https://pan.baidu.com/s/1RX9ltfA0HskI06THbhpHmA) (access code: lr7k).
+We test our CDTNet on 100 high-resolution real composite images as mentioned above, and provide the results on [Baidu Cloud](https://pan.baidu.com/s/1RX9ltfA0HskI06THbhpHmA) (access code: lr7k) or [Dropbox](https://www.dropbox.com/scl/fo/x7ofeyn8981s7553q6dtn/AKcMXcTde0BvytVuTN2D9rM?rlkey=vheumcxp4m5ifphmgxczbs67w&st=yqi0eicv&dl=0).
 
 #### 3. Low-resolution (256&times;256) results on iHarmony4 test set
 
-We also test our CDTNet on 256&times;256 images from iHarmony4 dataset. We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1CLGeV9BhqSjAbLY_FivhMw) (access code: l7gh).
+We also test our CDTNet on 256&times;256 images from iHarmony4 dataset. We also provide all harmonized results on [Baidu Cloud](https://pan.baidu.com/s/1CLGeV9BhqSjAbLY_FivhMw) (access code: l7gh) or [Dropbox](https://www.dropbox.com/scl/fi/28ubfhxn2sz0rp978ohmi/CDTNet_256_result.zip?rlkey=kwfsh9yz4la2u6yfdh66cjje0&st=eyj79hwp&dl=0).
 
 #### 4. Low-resolution (256&times;256) results on 99 real composite images
 
-We also test our CDTNet on another 99 real composite images used in [previous works](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4), and provide the results on [Baidu Cloud](https://pan.baidu.com/s/1djl8dHqzbZg893fUf6zImw) (access code: i6e8).
+We also test our CDTNet on another 99 real composite images used in [previous works](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4), and provide the results on [Baidu Cloud](https://pan.baidu.com/s/1djl8dHqzbZg893fUf6zImw) (access code: i6e8) or [Dropbox](https://www.dropbox.com/scl/fi/adv1t5yoz9c8xux3rq9ti/99-composite-result.zip?rlkey=6nm69z7n908zikca2xj28xfo8&st=m2xxpcll&dl=0).
 
 
 ## Other Resources
